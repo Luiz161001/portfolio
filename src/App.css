@@ -1,6 +1,19 @@
+:root {
+
+}
+html, body {
+    margin: 0;
+}
+
 header {
+    /* add the header color */
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
+    margin: 20vh;
+    margin-top: 0;
 }
 
 nav ul {
@@ -14,4 +27,9 @@ nav ul {
 #homeLink{
     display: flex;
     align-items: center;
+}
+
+footer {
+   display: flex;
+   justify-content: center;
 }
