@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
+    --main-collor: #FAFAFC;
+    --blue: #00AAFF;
 
+    --hover-blue: #89D5FB;
+
+    --text-color: #042940;
 }
+
+/* ------------------------ general  ------------------------*/
 html, body {
+    background-color: var(--main-collor);
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
+/* ------------------------ header  ------------------------*/
 header {
-    /* add the header color */
+    background-color: var(--main-collor);
 }
 
 .header-container {
@@ -22,13 +34,48 @@ nav ul {
     list-style: none;
     gap: 1rem;
     flex-wrap: wrap;
+    align-items: center;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 #homeLink{
     display: flex;
     align-items: center;
 }
+#homeLink a{
+    color: var(--blue);
+    font-size: 35px;
+}
 
+/* ------------------------ btn  ------------------------*/
+.btn {
+    display: block;
+    background-color: var(--main-collor);
+    width: 4.5rem;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.btn:hover{
+    box-shadow: 2px 2px 2px black;
+}
+
+.nav-contact {
+    color: var(--main-collor);
+    background-color: var(--blue);
+}
+
+.nav-contact:hover{
+    background-color: var(--hover-blue);
+    box-shadow: 2px 2px 2px black;
+}
+/* ------------------------ footer  ------------------------*/
 footer {
    display: flex;
    justify-content: center;
