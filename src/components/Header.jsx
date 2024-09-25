@@ -5,11 +5,11 @@ const Header = () => {
         <header id="header">
             <div className="header-container">
                 <div id="homeLink">
-                    <a href="#hero">Luiz Eduardo</a>
+                    <a href="#home">Luiz Eduardo</a>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#hero" className="btn">Home</a></li>
+                        <li><a href="#home" className="btn">Home</a></li>
                         <li><a href="#about" className="btn">About</a></li>
                         <li><a href="#projects" className="btn">Projects</a></li>
                         <li><a href="#contact" className="btn nav-contact">Contact</a></li>
