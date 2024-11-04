@@ -15,6 +15,8 @@ const Hero = () => {
                     <p className="text text2">
                         I'm a full stack developer with a strong foundation in computer science, always eager to expand my skills. When I'm not creating something new, I'm either exploring data structures, assisting students, or pushing limits in the gym.
                     </p>
+                    {/* add a  */}
+
                     <div className="btn-container">
                         <ul>
                             <li><a href="#" className="btn">First</a></li>
