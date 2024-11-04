@@ -6,8 +6,10 @@
 
     --text-color-blue: #00AAFF;
     --text-color-darkBlue: #042940;
-    --text-color-grey: #8a8f93;
+    --text-color-grey: #fafafcbf;
+    --text-color-lightGrey: #dadae0;
 }
+
 
 /* ------------------------ general  ------------------------*/
 html, body {
@@ -15,22 +17,29 @@ html, body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
-section .container, .header-container{
+.container, .header-container{
     margin-left: 20vh;
     margin-right: 20vh;
 }
 
 .text {
     color: var(--main-collor-light);
-    font-size: 2.5em;
     font-weight: 500;
 }
+
+ul{
+    list-style: none;
+}
+
 
 /* ------------------------ header  ------------------------*/
 header {
     background-color: var(--main-collor-dark);
-    position: fixed;
+    /* background-color: #1c1c1c42; */
+    position: sticky;
+    top: 0;
     width: 100%;
+    height: 4em;
 }
 
 .header-container {
@@ -41,7 +50,6 @@ header {
 nav ul {
     display: flex;
     flex-direction: row;
-    list-style: none;
     gap: 1em;
     flex-wrap: wrap;
     align-items: center;
@@ -60,6 +68,7 @@ a {
     color: var(--main-collor-light);
     font-size: 35px;
 }
+
 
 /* ------------------------ btn  ------------------------*/
 .btn {
@@ -82,6 +91,7 @@ a {
     background-color: var(--text-color-blue);
 }
 
+
 /* ------------------------ hero  ------------------------*/
 #hero {
     background-color: var(--main-collor-dark);
@@ -89,7 +99,106 @@ a {
 
 #hero .container{
     height: 100vh;
-    
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
+#hero .left{
+    display: flex;
+    padding-top: 20vh;
+    flex-direction: column;
+}
+#hero .left .text{
+    font-size: 4em;
+    margin: 0;
+}
+#hero .left .text1{
+    font-size: 2em;
+    padding-bottom: 0.5em;
+    color: var(--text-color-grey);
+}
+#hero .left .text2{
+    font-size: 1em;
+    color: var(--text-color-lightGrey);
+    width: 70%;
+    text-wrap: balance;
+}
+#hero .right{
+    /* background-color: #ff00d9; */
+    display: flex;
+    align-items: center;
+}
+
+#hero img{
+    width: 350px;
+    border-radius: 30%;
+}
+#hero ul{
+    padding: 0;
+}
+.btn-container ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+}
+.left .btn {
+    background-color: #00AAFF;
+}
+
+
+/* ------------------------ projects  ------------------------*/
+#projects {
+    /* background-color: var(--main-collor-dark); */
+}
+
+#projects .container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-rows: 1fr;
+}
+#projects .left{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#projects .left .text{
+    font-size: 4em;
+    margin: 0;
+}
+#projects .left .text1{
+    font-size: 2em;
+    padding-bottom: 0.5em;
+    color: var(--text-color-grey);
+}
+#projects .left .text2{
+    font-size: 1em;
+    color: var(--text-color-lightGrey);
+    width: 70%;
+    text-wrap: balance;
+}
+#projects .right{
+    /* background-color: #ff00d9; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects img{
+    width: 350px;
+    border-radius: 30%;
+}
+#projects ul{
+    padding: 0;
+}
+.btn-container ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+}
+.left .btn {
+    background-color: #00AAFF;
 }
 
 
