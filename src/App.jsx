@@ -8,9 +8,6 @@ function App() {
     <>
       <Header/>
       <Hero/>
-      <Hero/>
-      <Hero/>
-      <Hero/>
       <Footer/>
     </>
   )
