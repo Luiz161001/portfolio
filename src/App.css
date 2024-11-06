@@ -5,7 +5,6 @@
     --main-collor-dark: #1c1c1c;
 
     --text-color-blue: #00AAFF;
-    --text-color-darkBlue: #042940;
     --text-color-grey: #fafafcbf;
     --text-color-lightGrey: #dadae0;
 }
@@ -21,12 +20,10 @@ html, body {
     margin-left: 20vh;
     margin-right: 20vh;
 }
-
 .text {
     color: var(--main-collor-light);
     font-weight: 500;
 }
-
 ul{
     list-style: none;
 }
@@ -41,16 +38,13 @@ header {
     height: 4em;
     transition: background-color 0.4s ease-in-out;
 }
-
 header.scrolled {
     background-color: #1c1c1c42;;
 }
-
 .header-container {
     display: flex;
     justify-content: space-between;
 }
-
 nav ul {
     display: flex;
     flex-direction: row;
@@ -58,12 +52,10 @@ nav ul {
     flex-wrap: wrap;
     align-items: center;
 }
-
 a {
     color: var(--main-collor-light);
     text-decoration: none;
 }
-
 #homeLink{
     display: flex;
     align-items: center;
@@ -85,11 +77,9 @@ a {
     padding: 10px;
     color: var(--main-collor-light);
 }
-
 .btn:hover{
     color: var(--text-color-grey);
 }
-
 .nav-contact {
     color: var(--main-collor-light);
     background-color: var(--text-color-blue);
@@ -100,7 +90,6 @@ a {
 #hero {
     background-color: var(--main-collor-dark);
 }
-
 #hero .container{
     height: 100vh;
     display: grid;
@@ -133,7 +122,6 @@ a {
     display: flex;
     align-items: center;
 }
-
 #hero img{
     width: 350px;
     border-radius: 30%;
