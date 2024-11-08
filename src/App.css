@@ -2,7 +2,10 @@
 
 :root {
     --main-collor-light: #FAFAFC;
+    /* --main-collor-darkLight: #525252; */
     --main-collor-dark: #1c1c1c;
+
+    --navbar-collor: #1c1c1c42;
 
     --text-color-blue: #00AAFF;
     --text-color-grey: #fafafcbf;
@@ -31,15 +34,13 @@ ul{
 
 /* ------------------------ header  ------------------------*/
 header {
-    background-color: var(--main-collor-dark);
-    position: sticky;
+    background-color: var(--navbar-collor);
+    position: fixed;
     top: 0;
+    z-index: 1; 
     width: 100%;
     height: 4em;
     transition: background-color 0.4s ease-in-out;
-}
-header.scrolled {
-    background-color: #1c1c1c42;;
 }
 .header-container {
     display: flex;
@@ -51,6 +52,7 @@ nav ul {
     gap: 1em;
     flex-wrap: wrap;
     align-items: center;
+    padding-right: 20px;
 }
 a {
     color: var(--main-collor-light);
@@ -122,6 +124,7 @@ a {
     display: flex;
     align-items: center;
     background-image: url("./assets/background.jpg");
+    opacity: 0.7;
 }
 #hero img{
     width: 100%;
