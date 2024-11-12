@@ -100,6 +100,7 @@ a {
     justify-content: center;
 }
 #hero .left{
+    width: 100%;
     display: flex;
     padding-top: 20vh;
     flex-direction: column;
@@ -144,6 +145,74 @@ a {
     padding: 20px;
 }
 
+
+/* ------------------------ skillsBar  ------------------------*/
+
+.skill-bar{
+    height: 5em;
+    background-color: var(--main-collor-light);
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0.0),
+        rgba(0,0,0,1.0) 20%,
+        rgba(0,0,0,1.0) 80%,
+        rgba(0,0,0,0.0)
+    );
+}
+
+
+.tech{
+    width: 100px;
+    height: 100%;
+    left: 100%;
+    position: absolute;
+    animation: scroll-left 36s linear 0s infinite forwards;
+}
+@keyframes scroll-left {
+    from{
+        left: 100%;
+    }
+    to{
+        left: -100px;
+    }
+}
+
+.tech-1{
+    animation-delay: 0s;
+}
+.tech-2{
+    animation-delay: 4s;
+}
+.tech-3{
+    animation-delay: 8s;
+}
+.tech-4{
+    animation-delay: 12s;
+}
+.tech-5{
+    animation-delay: 16s;
+}
+.tech-6{
+    animation-delay: 20s;
+}
+.tech-7{
+    animation-delay: 24s;
+}
+.tech-8{
+    animation-delay: 28s;
+}
+.tech-9{
+    animation-delay: 32s;
+}
 
 /* ------------------------ projects  ------------------------*/
 #projects .container{

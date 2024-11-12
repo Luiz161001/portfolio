@@ -1,4 +1,5 @@
 import React from "react";
+import SkillsBar from "./SkillsBar";
 
 const Hero = () => {
     return (
@@ -11,7 +12,7 @@ const Hero = () => {
                         I'm a Software Developer
                     </p>
 
-                    {/* add a skill component here*/}
+                    {/* <SkillsBar/> */}
 
                     <div className="btn-container">
                         <ul>
