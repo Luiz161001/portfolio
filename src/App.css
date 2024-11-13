@@ -2,32 +2,40 @@
 
 :root {
     --main-collor-light: #FAFAFC;
-    /* --main-collor-darkLight: #525252; */
-    --main-collor-dark: #1c1c1c;
+    --main-collor-dark: #0d1117;
 
-    --navbar-collor: #1c1c1c42;
+    --navbar-collor: #0d111742;
 
-    --text-color-blue: #00AAFF;
-    --text-color-grey: #fafafcbf;
-    --text-color-lightGrey: #dadae0;
+    --color-blue: #00AAFF;
+    --color-dark-blue: #0E1F4F;
+    --color-vibrant-blue: #2979FF;
+    --color-light-gray: #F0F0F0;
+    --color-medium-gray: #9E9E9E;
+    --color-white: #FFFFFF;
+
 }
 
 
 /* ------------------------ general  ------------------------*/
-html, body {
+html,
+body {
     background-color: var(--main-collor-light);
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
-.container, .header-container{
+
+.container,
+.header-container {
     margin-left: 20vh;
     margin-right: 20vh;
 }
+
 .text {
-    color: var(--main-collor-light);
     font-weight: 500;
+    margin: 0;
 }
-ul{
+
+ul {
     list-style: none;
 }
 
@@ -37,15 +45,17 @@ header {
     background-color: var(--navbar-collor);
     position: fixed;
     top: 0;
-    z-index: 1; 
+    z-index: 1;
     width: 100%;
     height: 4em;
     transition: background-color 0.4s ease-in-out;
 }
+
 .header-container {
     display: flex;
     justify-content: space-between;
 }
+
 nav ul {
     display: flex;
     flex-direction: row;
@@ -54,15 +64,18 @@ nav ul {
     align-items: center;
     padding-right: 20px;
 }
+
 a {
     color: var(--main-collor-light);
     text-decoration: none;
 }
-#homeLink{
+
+#homeLink {
     display: flex;
     align-items: center;
 }
-#homeLink a{
+
+#homeLink a {
     color: var(--main-collor-light);
     font-size: 35px;
 }
@@ -74,17 +87,19 @@ a {
     background-color: var(--main-collor-dark);
     width: 5em;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 15px;
     font-size: 20px;
     padding: 10px;
     color: var(--main-collor-light);
 }
-.btn:hover{
-    color: var(--text-color-grey);
+
+.btn:hover {
+    color: var(--color-medium-gray);
 }
+
 .nav-contact {
     color: var(--main-collor-light);
-    background-color: var(--text-color-blue);
+    background-color: var(--color-blue);
 }
 
 
@@ -92,159 +107,113 @@ a {
 #hero {
     background-color: var(--main-collor-dark);
 }
-#hero .container{
+
+#hero .container {
     height: 100vh;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
-    justify-content: center;
 }
-#hero .left{
+
+#hero .left {
     width: 100%;
     display: flex;
     padding-top: 20vh;
     flex-direction: column;
+    padding-left: 20vh;
 }
-#hero .left .text{
+
+#hero .left .text0 {
+    font-size: 0.75em;
+    color: var(--color-blue);
+    padding-bottom: 5px;
+}
+
+#hero .left .text1 {
     font-size: 4em;
-    margin: 0;
+    color: var(--color-light-gray);
+    padding-bottom: 5px;
 }
-#hero .left .text1{
+
+#hero .left .text2 {
     font-size: 2em;
-    padding-bottom: 0.5em;
-    color: var(--text-color-grey);
+    color: var(--color-medium-gray);
+    padding-bottom: 5px;
+
 }
-#hero .left .text2{
-    font-size: 1em;
-    color: var(--text-color-lightGrey);
-    width: 70%;
-    text-wrap: balance;
+
+#hero .left .text3 {
+    width: 50%;
+    font-size: 0.75em;
+    color: var(--color-light-gray);
+    padding-bottom: 5px;
 }
-#hero .right{
-    /* background-color: #ff00d9; */
+
+#hero .right {
     display: flex;
     align-items: center;
     background-image: url("./assets/background.jpg");
     opacity: 0.7;
 }
-#hero img{
+
+#hero img {
     width: 100%;
     border-radius: 30%;
 }
-#hero ul{
+
+#hero ul {
     padding: 0;
 }
-.btn-container ul{
+
+.btn-container ul {
     display: flex;
     flex-direction: row;
     gap: 1.5em;
 }
+
 .left .btn {
-    background-color: #00AAFF;
-    width: 7em;
+    border: 1px solid var(--color-blue);
+    color: var(--color-blue);
+    width: 6.5em;
     padding: 20px;
 }
 
+.left .btn:hover {
+    background-color: var(--color-blue);
+    color: var(--color-dark-blue);
+    border: none;
+}
 
-/* ------------------------ skillsBar  ------------------------*/
-
-.skill-bar{
-    height: 5em;
-    background-color: var(--main-collor-light);
-    width: 100%;
-
+.socials{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-inline: auto;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    mask-image: linear-gradient(
-        to right,
-        rgba(0,0,0,0.0),
-        rgba(0,0,0,1.0) 20%,
-        rgba(0,0,0,1.0) 80%,
-        rgba(0,0,0,0.0)
-    );
+    flex-direction: row;
+    gap: 1em;
 }
 
-
-.tech{
-    width: 100px;
-    height: 100%;
-    left: 100%;
-    position: absolute;
-    animation: scroll-left 36s linear 0s infinite forwards;
-}
-@keyframes scroll-left {
-    from{
-        left: 100%;
-    }
-    to{
-        left: -100px;
-    }
-}
-
-.tech-1{
-    animation-delay: 0s;
-}
-.tech-2{
-    animation-delay: 4s;
-}
-.tech-3{
-    animation-delay: 8s;
-}
-.tech-4{
-    animation-delay: 12s;
-}
-.tech-5{
-    animation-delay: 16s;
-}
-.tech-6{
-    animation-delay: 20s;
-}
-.tech-7{
-    animation-delay: 24s;
-}
-.tech-8{
-    animation-delay: 28s;
-}
-.tech-9{
-    animation-delay: 32s;
-}
 
 /* ------------------------ projects  ------------------------*/
-#projects .container{
+/* #projects .container {
     height: 100vh;
     display: grid;
     grid-template-columns: 1.6fr 1fr;
     grid-template-rows: 1fr;
-}
-#projects .left{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-#projects .left .text{
-    color: var(--text-color-darkBlue);
-    font-size: 4em;
-    margin: 0;
-}
-#projects .right{
-    /* background-color: #ff00d9; */
+} */
+
+#projects .container {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#projects img{
-    width: 350px;
-    border-radius: 30%;
+
+#projects .text {
+    font-size: 4em;
+    color: var(--color-dark-blue);
 }
 
 
 /* ------------------------ footer  ------------------------*/
 footer {
-   display: flex;
-   justify-content: center;
+    display: flex;
+    justify-content: center;
 }
