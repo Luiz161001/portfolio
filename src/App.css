@@ -7,6 +7,7 @@
     --navbar-collor: #0d111742;
 
     --color-blue: #00AAFF;
+    --color-light-blue: #c5ebfea8;
     --color-dark-blue: #0E1F4F;
     --color-vibrant-blue: #2979FF;
     --color-light-gray: #F0F0F0;
@@ -27,6 +28,7 @@ body {
 .text {
     font-weight: 500;
     margin: 0;
+    letter-spacing: 2px;
 }
 
 ul {
@@ -129,27 +131,34 @@ a {
 
 #hero .left .text0 {
     font-size: 0.75em;
-    color: var(--color-blue);
+    color: var(--color-light-blue);
     padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 #hero .left .text1 {
-    font-size: 4em;
-    color: var(--color-light-gray);
+    font-size: 5em;
+    color: var(--color-blue);
     padding-bottom: 5px;
+    text-indent: -4px;
 }
 
 #hero .left .text2 {
-    font-size: 2em;
-    color: var(--color-medium-gray);
+    font-size: 2.5em;
+    color: var(--color-white);
     padding-bottom: 5px;
+    margin-bottom: 10px;
+}
 
+#hero .left .text-color {
+    color: var(--color-blue);
 }
 
 #hero .left .text3 {
-    font-size: 0.75em;
-    color: var(--color-light-gray);
+    font-size: 1em;
+    color: var(--color-light-blue);
     padding-bottom: 5px;
+    margin-bottom: 1em;
 }
 
 #hero .right {
@@ -194,7 +203,7 @@ a {
     gap: 1em;
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 1200px){
     #hero .right {
         display: flex;
         align-items: center;
@@ -213,7 +222,7 @@ a {
         padding-left: 20vh;
     }
     #hero .left .text3 {
-        width: 50%;
+        width: 70%;
     }
 }
 
