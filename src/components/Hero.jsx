@@ -19,8 +19,8 @@ const Hero = () => {
                     </div>
 
                     <div className="socials">
-                        <a href="www.linkedin.com/in/lvieiradepaulo">LinkedIn</a>
-                        <a href="https://github.com/Luiz161001">GitHub</a>
+                        <a href="www.linkedin.com/in/lvieiradepaulo" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/Luiz161001" target="_blank">GitHub</a>
                     </div>
                     
                 </div>
