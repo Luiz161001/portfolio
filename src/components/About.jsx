@@ -1,15 +1,18 @@
 import React from "react";
+import pfp from "../assets/myself.png";
 
 const About = () => {
     return (
-        <div className=".about-container">
+        <section id="about">
             <div className="left">
-
+                <img src={pfp} alt="" />
+                <p>gkfjqk3llkq ajdnfjeqlrrka ejrnlklk</p>
             </div>
-            <div className="rig">
-
+            <div className="right">
+                {/* <img src={pfp} alt="" />
+                <p>gkfjqk3llkq ajdnfjeqlrrka ejrnlklk</p> */}
             </div>
-        </div>
+        </section>
     )
 }
 
