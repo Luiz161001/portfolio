@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
     --main-collor-light: #FAFAFC;
     --main-collor-dark: #0d1117;
+    --main-collor-lightDark: #0d11178b;
 
-    --navbar-collor: #0d111742;
+    --navbar-collor: #0d111792;
 
     --color-blue: #00AAFF;
+    --color-blue-light: #52bdf3;
     --color-light-blue: #c5ebfea8;
     --color-dark-blue: #0E1F4F;
     --color-vibrant-blue: #2979FF;
@@ -20,9 +22,8 @@
 /* ------------------------ general  ------------------------*/
 html,
 body {
-    background-color: var(--main-collor-light);
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Geist', sans-serif;
 }
 
 .text {
@@ -34,16 +35,32 @@ body {
 ul {
     list-style: none;
 }
+.container,
+.header-container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
-@media only screen and (min-width: 768px) {
-    .container,
-    .header-container {
+
+@media only screen and (min-width: 900px) {
+    .container {
         margin-left: 20vh;
         margin-right: 20vh;
     }
+
+    /* .cards-container section{
+        position: sticky;
+        top: 0;
+        object-fit: cover;
+    } */
 }
 
 /* ------------------------ header  ------------------------*/
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .header-container {
     display: flex;
     justify-content: end;
@@ -55,13 +72,17 @@ nav {
 }
 
 header {
-    background-color: var(--navbar-collor);
     position: fixed;
-    top: 0;
+    top: 0.5em;
     z-index: 1;
-    width: 100%;
+    width: 80%;
     height: 10vh;
     transition: background-color 0.4s ease-in-out;
+    border-radius: 50px;
+}
+
+.scrolled {
+    background-color: var(--navbar-collor);
 }
 
 a {
@@ -74,7 +95,7 @@ a {
     height: 100%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 900px) {
     nav {
         display: block;
     }
@@ -119,10 +140,12 @@ a {
 }
 
 #hero .container {
+    /* background-color: greenyellow; */
     height: 100vh;
 }
 
 #hero .left {
+    /* background-color: rgb(47, 134, 255); */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -144,7 +167,7 @@ a {
 }
 
 #hero .left .text2 {
-    font-size: 2em;
+    font-size: 3em;
     color: var(--color-white);
     padding-bottom: 5px;
     margin-bottom: 10px;
@@ -155,10 +178,11 @@ a {
 }
 
 #hero .left .text3 {
+    font-weight: 200;
     font-size: 1em;
     color: var(--color-light-blue);
     padding-bottom: 5px;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 }
 
 #hero .right {
@@ -178,14 +202,12 @@ a {
 .left .btn {
     border: 1px solid var(--color-blue);
     color: var(--color-blue);
-    width: 6.5em;
+    width: 5em;
     padding: 20px;
 }
 
 .left .btn:hover {
-    background-color: var(--color-blue);
-    color: var(--color-dark-blue);
-    border: none;
+    background-color: rgba(0, 0, 0, 0.516);
 }
 
 .left .contactBtn{
@@ -194,6 +216,7 @@ a {
 
 .left .contactBtn:hover{
     background-color: #00aaffcc;
+   
     color: var(--color-dark-blue);
 }
 
@@ -201,39 +224,54 @@ a {
     display: flex;
     flex-direction: row;
     gap: 1em;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+@media only screen and (min-height: 300px ) and (max-height: 800px){
+    #hero .container {
+        height: 100%;
+    }
 }
 
 @media only screen and (min-width: 1200px){
     #hero .right {
-        display: flex;
-        align-items: center;
+        display: block;
+        width: 100%;
         background-image: url("./assets/background.jpg");
         opacity: 0.7;
     }
     #hero .container {
+        height: 100vh;
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1.8fr 1fr;
         grid-template-rows: 1fr;
     }
     #hero .left {
         display: flex;
         flex-direction: column;
-        padding-top: 20vh;
-        padding-left: 20vh;
+        /* padding-top: 20vh; */
+    }
+    #hero .left .text1 {
+        font-size: 5em;
     }
     #hero .left .text3 {
         width: 70%;
+    }
+    #hero .left .text, .btn-container, .socials {
+        padding-left: 10vh;
+    }
+    .left .btn {
+        width: 6.5em;
     }
 }
 
 
 /* ------------------------ projects  ------------------------*/
-/* #projects .container {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1.6fr 1fr;
-    grid-template-rows: 1fr;
-} */
+
+#projects {
+    background-color: var(--main-collor-light);
+}
 
 #projects .container {
     height: 100vh;
@@ -247,9 +285,77 @@ a {
     color: var(--color-dark-blue);
 }
 
+/* ------------------------ about  ------------------------*/
+#about {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-collor-dark);
+}
+
+#about .left{
+    background-color: var(--color-blue);
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 0.75fr 1fr;
+    grid-template-rows: 1fr;
+
+    overflow: hidden;
+}
+
+#about img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#about .right{
+    /* background-color: greenyellow; */
+    width: 100%;
+    height: 100%;
+}
+
+#about .text{
+    font-size: 1.5em;
+    font-weight: 600;
+} 
+
+#about .right .text{
+    color: var(--color-white);
+}
+
+#about p {
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#about ul {
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: large;
+}
+
+#about ul li a:hover{
+    color: var(--color-blue);
+}
+
+@media only screen and (min-width: 1200px){
+    #about {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        height: 50vh;
+    }
+}
 
 /* ------------------------ footer  ------------------------*/
 footer {
     display: flex;
     justify-content: center;
+    background-color: var(--main-collor-dark);
+    color: var(--color-light-blue);
+    padding: 10px;
 }
