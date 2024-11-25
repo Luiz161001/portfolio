@@ -3,8 +3,9 @@
 :root {
     --main-collor-light: #FAFAFC;
     --main-collor-dark: #0d1117;
+    --main-collor-lightDark: #0d11178b;
 
-    --navbar-collor: #0d111742;
+    --navbar-collor: #0d111792;
 
     --color-blue: #00AAFF;
     --color-light-blue: #c5ebfea8;
@@ -41,20 +42,24 @@ ul {
 
 
 @media only screen and (min-width: 900px) {
-    .container,
-    .header-container {
+    .container {
         margin-left: 20vh;
         margin-right: 20vh;
     }
 
-    .cards-container section{
+    /* .cards-container section{
         position: sticky;
         top: 0;
         object-fit: cover;
-    }
+    } */
 }
 
 /* ------------------------ header  ------------------------*/
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .header-container {
     display: flex;
     justify-content: end;
@@ -66,13 +71,17 @@ nav {
 }
 
 header {
-    background-color: var(--navbar-collor);
     position: fixed;
-    top: 0;
+    top: 0.5em;
     z-index: 1;
-    width: 100%;
+    width: 80%;
     height: 10vh;
     transition: background-color 0.4s ease-in-out;
+    border-radius: 50px;
+}
+
+.scrolled {
+    background-color: var(--navbar-collor);
 }
 
 a {
@@ -234,7 +243,7 @@ a {
     #hero .container {
         height: 100vh;
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1.8fr 1fr;
         grid-template-rows: 1fr;
     }
     #hero .left {
@@ -258,12 +267,6 @@ a {
 
 
 /* ------------------------ projects  ------------------------*/
-/* #projects .container {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1.6fr 1fr;
-    grid-template-rows: 1fr;
-} */
 
 #projects {
     background-color: var(--main-collor-light);
@@ -289,12 +292,12 @@ a {
 }
 
 #about .left{
-    /* background-color: #00AAFF; */
+    background-color: var(--color-blue);
     width: 100%;
     height: 100%;
 
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 }
 
@@ -305,14 +308,13 @@ a {
 }
 
 #about .right{
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
     width: 100%;
     height: 100%;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+#about .right .text{
+    color: var(--color-white);
 }
 
 @media only screen and (min-width: 1200px){
@@ -320,7 +322,7 @@ a {
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr;
-        height: 100vh;
+        height: 50vh;
     }
 }
 

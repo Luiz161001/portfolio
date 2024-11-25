@@ -6,11 +6,14 @@ const About = () => {
         <section id="about">
             <div className="left">
                 <img src={pfp} alt="" />
-                <p>gkfjqk3llkq ajdnfjeqlrrka ejrnlklk</p>
+                <p className="text">about</p>
             </div>
             <div className="right">
-                {/* <img src={pfp} alt="" />
-                <p>gkfjqk3llkq ajdnfjeqlrrka ejrnlklk</p> */}
+                <p className="text">contact</p>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/lvieiradepaulo/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/Luiz161001" target="_blank">GitHub</a></li>
+                </ul>
             </div>
         </section>
     )
