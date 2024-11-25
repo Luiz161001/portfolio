@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
     --main-collor-light: #FAFAFC;
@@ -8,6 +8,7 @@
     --navbar-collor: #0d111792;
 
     --color-blue: #00AAFF;
+    --color-blue-light: #52bdf3;
     --color-light-blue: #c5ebfea8;
     --color-dark-blue: #0E1F4F;
     --color-vibrant-blue: #2979FF;
@@ -22,7 +23,7 @@
 html,
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Geist', sans-serif;
 }
 
 .text {
@@ -285,6 +286,9 @@ a {
 }
 
 /* ------------------------ about  ------------------------*/
+#about .test {
+    background-color: #0d1117;
+}
 #about {
     display: flex;
     flex-direction: column;
@@ -313,8 +317,30 @@ a {
     height: 100%;
 }
 
+#about .text{
+    font-size: 1.5em;
+    font-weight: 600;
+} 
+
 #about .right .text{
     color: var(--color-white);
+}
+
+#about p {
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#about ul {
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: large;
+}
+
+#about ul li a:hover{
+    color: var(--color-blue);
 }
 
 @media only screen and (min-width: 1200px){

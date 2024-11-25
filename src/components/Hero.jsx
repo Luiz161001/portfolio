@@ -13,7 +13,7 @@ const Hero = () => {
 
                     <div className="btn-container">
                         <ul>
-                            <li><a href="#contact" className="btn contactBtn">Let's talk</a></li>
+                            <li><a href="#about" className="btn contactBtn">Let's talk</a></li>
                             <li><a href="#" className="btn">Resume</a></li>
                         </ul>
                     </div>
