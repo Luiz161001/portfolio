@@ -1,14 +1,11 @@
 import React from "react";
-import pfp from "../assets/myself.png";
+import pic from "../assets/IMG_6133.png";
 
 const About = () => {
     return (
         <section id="about">
             <div className="left">
-                {/* <img src={pfp} alt="" /> */}
-                <div className="test">
-
-                </div>
+                <img src={pic} alt="" />
                 <p className="text">About</p>
             </div>
             <div className="right">
