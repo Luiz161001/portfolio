@@ -7,13 +7,11 @@ import About from './components/About';
 function App() {
   return (
     <>
-      <Header/>
-      <div className='cards-container'>
-        <Hero/>
-        <Projects/>
-        <About />  
-      </div>
-      <Footer/>
+      <Header />
+      <Hero />
+      <Projects />
+      <About />
+      <Footer />
     </>
   )
 }
