@@ -6,7 +6,9 @@ const About = () => {
         <section id="about">
             <div className="left">
                 <img src={pic} alt="" />
-                <p className="text">About</p>
+                <div className="about-text">
+                    <p className="text">About</p>
+                </div>
             </div>
             <div className="right">
                 <p className="text">Contact</p>
