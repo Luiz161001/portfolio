@@ -311,9 +311,8 @@ nav ul {
 
 #about .about-text {
     width: 100%;
-    height: 100%;
+    height: 80vh;
 }
-
 
 #about .right{
     /* background-color: greenyellow; */
