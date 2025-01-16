@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpg" href="./src/assets/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luiz Eduardo</title>
+    <link rel="stylesheet" href="./src/App.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('scroll', () => {
+          const header = document.querySelector('header');
+          if(window.scrollY > 0){
+            header.classList.add('scrolled');
+          }
+          else{
+            header.classList.remove('scrolled');
+          }
+        })
+      })
+    </script>
+  </body>
+</html>
