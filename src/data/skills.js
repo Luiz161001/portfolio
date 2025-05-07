@@ -1,3 +1,5 @@
+import railwayIcon from "../assets/icons/railway.svg";
+
 const skills = [
     {
         category: "Frontend",
@@ -28,7 +30,8 @@ const skills = [
             { name: "AWS", icon: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" },
             { name: "Vercel", icon: "https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" },
             { name: "Postman", icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
-            { name: "Docker", icon: "https://www.vectorlogo.zone/logos/docker/docker-tile.svg" }
+            { name: "Docker", icon: "https://www.vectorlogo.zone/logos/docker/docker-tile.svg" },
+            { name: "Railway", icon: railwayIcon }
         ]
     },
     {

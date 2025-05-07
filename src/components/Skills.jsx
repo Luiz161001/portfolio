@@ -4,9 +4,9 @@ import SkillComp from "./SkillComp";
 
 const Skills = () => {
     return (
-        <section id="skills">
-            <div className="container">
-                <h1 className="title">Skills</h1>
+        // <section id="skills">
+            <div className="skills">
+                {/* <h1 className="title">Skills</h1> */}
                 <div className="skill-container">
                     {skillsData.map(skillData => {
                       return (
@@ -15,7 +15,7 @@ const Skills = () => {
                     })}
                 </div>
             </div>
-        </section>
+        // </section>
     )
 }
 

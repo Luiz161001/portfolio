@@ -1,23 +1,21 @@
 const experiences = [
     {
-        company: "SQL Research Project",
-        position: "Full stack developer",
-        skills: []
-    },
-    {
         company: "Langara College",
         position: "Teacher Assistant (Marker)",
-        skills: []
+        skills: [],
+        description: "",
     },
     {
         company: "Goodlife Fitness",
         position: "Club Attendant",
-        skills: []
+        skills: [],
+        description: "",
     },
     {
         company: "Nike",
         position: "Sales Associate",
-        skills: []
+        skills: [],
+        description: "",
     }
 ];
 
