@@ -4,18 +4,18 @@ import SkillComp from "./SkillComp";
 
 const Skills = () => {
     return (
-        <section id="skills">
-            <div className="container">
-                <h1 className="title">Skills</h1>
+        // <section id="skills">
+            <div className="skills">
+                {/* <h1 className="title">Skills</h1> */}
                 <div className="skill-container">
-                    {skillsData.map(skillData => {
+                    {skillsData.map((skillData, index) => {
                       return (
-                        <SkillComp category={skillData.category} skills={skillData.skills}/>
+                        <SkillComp key={index} category={skillData.category} skills={skillData.skills}/>
                       ); 
                     })}
                 </div>
             </div>
-        </section>
+        // </section>
     )
 }
 
