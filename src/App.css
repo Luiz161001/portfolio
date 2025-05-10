@@ -15,6 +15,7 @@
     --box-border-glow: transparent;
     --nav-mobile: #131b2cda;
     --project-section-bg: #EDF3F8;
+    --dark-border: #013253;
 }
 
 .dark {
@@ -52,6 +53,10 @@ ul {
 a {
     color: var(--primary-text);
     text-decoration: none;
+}
+
+h1 {
+    margin-top: 0;
 }
 
 .container,

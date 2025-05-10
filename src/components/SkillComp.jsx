@@ -3,9 +3,9 @@ const SkillComp = ({ category, skills }) => {
         <div className="single-skill-container">
             <h1>{category}</h1>
             <div className="skills-box">
-                {skills.map(skill => {
+                {skills.map((skill, index) => {
                     return (
-                        <div className="skill">
+                        <div className="skill" key={index}>
                             <img src={skill.icon} alt="react-icon" /><span>{skill.name}</span>
                         </div>  
                     );

@@ -6,20 +6,20 @@
 }
 .skill-container {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 1em;
-    /* padding-left: 2em; */
-    /* padding-right: 2em; */
+    overflow: scroll;
+    padding: 10px;
 }
 
 .single-skill-container {
     background-color: var(--skill-tags-bg);
-    /* color: var(--color-medium-gray-2); */
     box-shadow: 0 4px 6px #bbbaba;
     padding: 20px;
     border: 2px solid var(--skill-tags-border);
     border-radius: 15px;
-    /* width: auto; */
+
+    min-width: 250px;
 }
 
 .single-skill-container h1 {
@@ -54,6 +54,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
         gap: 1em;
+        overflow: unset;
     }
 
     #skills .container {

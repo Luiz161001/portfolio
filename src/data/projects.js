@@ -16,7 +16,7 @@ const projects = [
             github: "https://github.com/hazraimran"
         }],
         images: [sqlbeyond]
-    }
+    },
 ];
 
 export default projects; 

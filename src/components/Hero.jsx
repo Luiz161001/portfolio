@@ -9,7 +9,7 @@ const Hero = () => {
                 <div className="left">
                     <p className="text text0">Hi, my name is</p>
                     <p className="text text1">Luiz Eduardo</p>
-                    <p className="text text2">& I'm a
+                    <div className="text text2">& I'm a
                         <span className="text-color">
                             <Typewriter
                                 options={{
@@ -21,7 +21,7 @@ const Hero = () => {
                                 }}
                             />
                         </span>
-                    </p>
+                    </div>
                     <p className="text text3">I love learning new stuff and building things. When I'm not coding, I will be either at the gym lifting weights or reading books!</p>
 
                     <div className="btn-container">
