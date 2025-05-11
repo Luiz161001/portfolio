@@ -30,21 +30,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    min-width: 300px;
+    
+    max-width: 400px;
     flex: 1;
 
-    border: 1px solid var(--dark-border);
     border-radius: 20px;
     padding: 1em;
-    box-shadow: 0 2px 8px var(--accent-blue);
+    box-shadow: 0 2px 8px var(--opposite-bg);
 }
 
 .project-info{
     display: flex;
     flex-direction: column;
-    padding: 15px;
-    gap: 10px;
+    padding-top: 15px;
+    gap: 5px;
 }
 .project-info h1{
     font-weight: 500;
@@ -65,6 +64,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    max-width: max-content;
 }
 
 .project-collaborators ul{
@@ -132,14 +132,30 @@
 
 .project-links{
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
-
-.project-links a{
+.project-links a {
     display: flex;
     align-items: center;
     gap: 5px;
     text-decoration: none;
+    border: 2px solid var(--opposite-bg);
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: var(--primary-text);
+    font-weight: 500;
+    box-shadow: 0 1px 4px #393838;
+}
+
+.project-links a:hover {
+    background-color: var(--nav-mobile);
+    color: var(--white-text);
+}
+
+.project-links .link-btn {
+    background-color: var(--opposite-bg);
+    color: var(--white-text);
+    border: none;
 }
 
 .project-links a img{
@@ -188,24 +204,7 @@
     color: var(--white-text);
 }
 
-.project-links a {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    text-decoration: none;
-    border: 2px solid var(--skill-tags-border);
-    padding: 5px 10px;
-    border-radius: 15px;
-    color: var(--primary-text);
-    font-weight: 500;
-}
 
-.project-links .link-btn {
-    background-color: var(--opposite-bg);
-    color: var(--white-text);
-    border: none;
-    box-shadow: 0 1px 4px #393838;
-}
 
 @media only screen and (min-width: 900px) {
     #projects .title {

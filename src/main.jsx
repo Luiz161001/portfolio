@@ -8,6 +8,8 @@ import "./styles/hero.css";
 import "./styles/skills.css";
 import "./styles/projects.css";
 
+import "./styles/contact.css";
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />

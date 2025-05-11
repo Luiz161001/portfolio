@@ -16,7 +16,6 @@
     background-color: var(--skill-tags-bg);
     box-shadow: 0 4px 6px #bbbaba;
     padding: 20px;
-    border: 2px solid var(--skill-tags-border);
     border-radius: 15px;
 
     min-width: 250px;

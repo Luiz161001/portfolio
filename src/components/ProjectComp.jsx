@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const ProjectComp = ({ project }) => {
 
@@ -29,10 +31,10 @@ const ProjectComp = ({ project }) => {
                 <p>{project.description}</p>
 
 
-                <div className="project-collaborators">
+                {/* <div className="project-collaborators">
                     <h3>Collaborators:</h3>
                     {project.members.length > 0 ? renderCollaborators() : <p>No collaborators</p>}
-                </div>
+                </div> */}
 
                 <div className="project-technologies">
                     <h3>Technologies:</h3>
@@ -49,7 +51,8 @@ const ProjectComp = ({ project }) => {
 
                 <div className="project-links">
                     {project.url ? <a href={project.url} className="link-btn">
-                        <FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" />Live</a>
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                    Live</a>
                         :
                         <a className="link-btn">Not deployed</a>}
                     <a href={project.repo}>
