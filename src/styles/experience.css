@@ -1,0 +1,25 @@
+#experience {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    padding-bottom: 3em;
+}
+
+#experience .container {
+    /* width: 100%; */
+    background-color: aqua;
+}
+
+#experience .title {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--primary-text);
+    padding-left: 20px;
+}
+
+@media only screen and (min-width: 900px) {
+    #experience .title {
+        font-size: 2.5em;
+        padding-left: 0;
+    }
+}

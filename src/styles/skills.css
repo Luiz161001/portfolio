@@ -1,5 +1,5 @@
 .skills .title {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 600;
     margin: 0;
     color: var(--primary-text);
@@ -15,7 +15,7 @@
 .single-skill-container {
     background-color: var(--skill-tags-bg);
     box-shadow: 0 4px 6px #bbbaba;
-    padding: 20px;
+    padding: 1em;
     border-radius: 15px;
 
     min-width: 250px;
@@ -31,20 +31,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 0.5em;
 }
 
 .skill {
     border: 2px solid var(--skill-tags-border);
     border-radius: 15px;
-    padding: 8px;
+    padding: 0.25em;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.15em;
 }
 
 .skill img {
-    width: 30px;
+    width: 1.5em;
 }
 
 @media only screen and (min-width: 900px) {

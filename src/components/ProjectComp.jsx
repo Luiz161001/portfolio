@@ -55,7 +55,7 @@ const ProjectComp = ({ project }) => {
                     Live</a>
                         :
                         <a className="link-btn">Not deployed</a>}
-                    <a href={project.repo}>
+                    <a href={project.repo} target="_blank">
                         <img src="https://www.vectorlogo.zone/logos/github/github-tile.svg" alt="react-icon" />
                         Code
                     </a>

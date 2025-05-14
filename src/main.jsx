@@ -7,8 +7,10 @@ import "./styles/hero-mobile.css";
 import "./styles/hero.css";
 import "./styles/skills.css";
 import "./styles/projects.css";
-
+import "./styles/experience.css";
+import "./styles/contact-mobile.css";
 import "./styles/contact.css";
+import "./styles/footer.css";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

@@ -1,9 +1,23 @@
+@media (min-width: 640px) {
+    /* small tablets */
+}
+
+@media (min-width: 1024px) {
+    /* laptops and desktops */
+}
+
+@media (min-width: 1440px) {
+    /* large screens */
+}
+
+
 @media only screen and (min-width: 1200px) {
     #hero {
         padding-top: 5em;
         padding-bottom: 0%;
-        min-height: 90vh;
+        /* min-height: 90vh; */
     }
+
     #hero .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -32,7 +46,7 @@
 
     #hero .left .text3 {
         width: 70%;
-        margin-bottom: 1.5em;
+        margin-bottom: 1em;
         font-size: 1em;
     }
 

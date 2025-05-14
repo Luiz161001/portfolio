@@ -13,6 +13,7 @@
     --section-separators: #F9FAFB;
     --white-text: #FFFFFF;
     --box-border-glow: transparent;
+    --nav: #ffffffcc;
     --nav-mobile: #131b2cda;
     --project-section-bg: #EDF3F8;
     --dark-border: #013253;
@@ -20,20 +21,39 @@
 }
 
 .dark {
-    --background: #0d1117;
-    --primary-text: #ffffff;
-    --accent-blue: #0099ff;
-    --subtext: #a3aab8;
-    --button: #1e90ff;
-    --button-hover: #0099ff;
-    --skill-tags-bg: #111827;
-    --skill-tags-border: #00bfff;
-    --section-separators: #F9FAFB;
-    --white-text: #ffffff;
-    --box-border-glow: #00ccff;
-    --project-section-bg: #F5F9FC;
-    --dark-border: #013253;
-    --opposite-bg: #0d1117;
+    --background: #0D1117;
+    /* dark canvas background */
+    --primary-text: #E6EDF3;
+    /* soft white text for contrast */
+    --accent-blue: #58A6FF;
+    /* bright accent blue for links/buttons */
+    --subtext: #8B949E;
+    /* muted gray for subtext */
+    --button: #1F6FEB;
+    /* vivid blue for CTAs */
+    --button-hover: #388BFD;
+    /* lighter hover blue */
+    --skill-tags-bg: #161B22;
+    /* soft dark background for tags */
+    --skill-tags-border: #30363D;
+    /* subtle border for tags */
+    --section-separators: #21262D;
+    /* thin separators between sections */
+    --white-text: #FFFFFF;
+    /* pure white if needed */
+    --box-border-glow: #1F6FEB66;
+    /* soft blue glow for interactive elements */
+    --nav: #0D1117CC;
+    /* translucent dark for nav */
+    --nav-mobile: #0D1117;
+    /* consistent with background */
+    --project-section-bg: #161B22;
+    /* dark neutral background for sections */
+    --dark-border: #30363D;
+    /* consistent with other borders */
+    --opposite-bg: #FFFFFF;
+    /* for toggling between themes */
+
 }
 
 
@@ -76,44 +96,4 @@ h1 {
     font-size: 20px;
     padding: 10px;
     cursor: pointer;
-}
-
-/* ------------------------ experience  ------------------------*/
-
-#experience {
-    background-color: var(--main-collor-dark-3);
-    display: flex;
-    flex-direction: column;
-}
-
-#experience::before {
-    content: '';
-    background: linear-gradient(to bottom,
-            var(--main-collor-dark),
-            rgba(255, 255, 255, 0));
-    height: 1.5em;
-    width: 100%;
-}
-
-#experience .container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#experience .text {
-    font-size: 4em;
-    color: var(--main-collor-light);
-}
-
-
-/* ------------------------ footer  ------------------------*/
-footer {
-    display: flex;
-    justify-content: center;
-    background-color: var(--main-collor-dark);
-    color: var(--color-light-blue);
-    padding: 10px;
-    border-top: 1px solid var(--opposite-bg);
 }

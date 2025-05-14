@@ -13,19 +13,19 @@ const Contact = () => {
                         <h2>Contact Info</h2>
                         <ul>
                             <li>
-                                <a href="mailto:lvieiradepaulo00dev@gmail.com">
+                                <a href="mailto:lvieiradepaulo00dev@gmail.com" target="_blank">
                                     <FontAwesomeIcon icon={faEnvelope} />
                                     lvieiradepaulo00dev@gmail.com
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.linkedin.com/in/lvieiradepaulo/">
+                                <a href="https://www.linkedin.com/in/lvieiradepaulo/" target="_blank">
                                     <FontAwesomeIcon icon={faLinkedin} />
                                     linkedin.com/in/lvieiradepaulo/
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="https://github.com/Luiz161001" target="_blank">
                                     <FontAwesomeIcon icon={faGithub} />
                                     github.com/Luiz161001
                                 </a>

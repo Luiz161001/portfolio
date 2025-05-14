@@ -11,8 +11,6 @@ const Projects = () => {
     const firstIndex = lastIndex - numberOfProjectsPerPage;
 
     const currentProjects = projects.slice(firstIndex, lastIndex);
-
-    console.log(currentPage);
     
     return (
         <section id="projects">

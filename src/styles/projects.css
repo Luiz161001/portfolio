@@ -7,14 +7,14 @@
 }
 
 #projects .container {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
 }
 #projects .title {
     font-size: 2em;
     font-weight: 700;
-    color: var(--main-collor-light);
+    color: var(--primary-text);
     padding-left: 20px;
 }
 
@@ -205,10 +205,22 @@
 }
 
 
+/* might not be needed */
+@media (min-width: 640px) {
+    /* small tablets */
+}
 
-@media only screen and (min-width: 900px) {
+@media (min-width: 1024px) {
+    /* laptops and desktops */
+}
+
+@media (min-width: 1440px) {
+    /* large screens */
+}
+
+@media only screen and (min-width: 1024px) {
     #projects .title {
-        font-size: 3em;
+        font-size: 2.5em;
         padding-left: 0;
     }
     #projects .container {
