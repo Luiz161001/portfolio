@@ -1,24 +1,22 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
+import Navbar from './components/Navbar.jsx'
+import Hero from './components/Hero.jsx'
+import About from './components/About.jsx'
+import Projects from './components/Projects.jsx'
+import Contact from './components/Contact.jsx'
+import Footer from './components/Footer.jsx'
+import { ThemeProvider } from './hooks/useTheme.jsx'
 
-function App() {
-
+export default function App() {
   return (
-    <>
-      <Header />
-      <Hero />
-      {/* <Skills /> */}
-      <Projects />
-      <Experience />
-      <Contact />
-      <Footer />
-    </>
+    <ThemeProvider>
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Projects />
+          <Contact />
+        </main>
+        <Footer />
+    </ThemeProvider>
   )
 }
-
-export default App

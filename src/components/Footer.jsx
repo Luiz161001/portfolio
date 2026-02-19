@@ -1,14 +1,12 @@
-import React from "react";
 
-const Footer = () => {
-    let year = new Date();
-    year = year.getFullYear();
+import React from 'react'
 
-    return (
-        <footer>
-            <div id="footer">&copy; { year } Luiz Eduardo. All rights reserved.</div>
-        </footer>
-    )
+export default function Footer() {
+  return (
+    <footer className="py-8 border-t border-[color-mix(in_oklab,var(--text) 10%,transparent)]">
+      <div className="container-max text-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div>&copy; {new Date().getFullYear()} Luiz Eduardo</div>
+      </div>
+    </footer>
+  )
 }
-
-export default Footer;
