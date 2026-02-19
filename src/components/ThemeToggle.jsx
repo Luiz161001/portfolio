@@ -1,22 +1,62 @@
-
-import React from 'react'
-import { useTheme } from '../hooks/useTheme.jsx'
-import { Sun, Moon, Monitor } from 'lucide-react'
+import React, { useEffect, useState } from "react"
+import { Sun, Moon, Monitor } from "lucide-react"
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme()
-  const btn = 'px-3 py-1 rounded-xl border focus-ring'
+  const [theme, setTheme] = useState("system") // light | dark | system
+
+  // Apply theme to document
+  const applyTheme = (value) => {
+    const root = document.documentElement
+
+    if (value === "dark") {
+      root.classList.add("dark")
+    } else if (value === "light") {
+      root.classList.remove("dark")
+    } else {
+      // system
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+      root.classList.toggle("dark", prefersDark)
+    }
+  }
+
+  // On mount: load saved theme
+  useEffect(() => {
+    const saved = localStorage.getItem("theme") || "system"
+    setTheme(saved)
+    applyTheme(saved)
+  }, [])
+
+  const handleChange = (value) => {
+    setTheme(value)
+    localStorage.setItem("theme", value)
+    applyTheme(value)
+  }
+
+  const Item = ({ value, Icon }) => {
+    const active = theme === value
+
+    return (
+      <button
+        onClick={() => handleChange(value)}
+        aria-pressed={active}
+        className={[
+          "h-8 w-8 flex items-center justify-center rounded-md transition",
+          "focus-ring hover:opacity-90",
+          active
+            ? "bg-[color-mix(in_oklab,var(--text)_10%,transparent)] text-[var(--text)]"
+            : "text-[var(--muted)]"
+        ].join(" ")}
+      >
+        <Icon size={16} />
+      </button>
+    )
+  }
+
   return (
-    <div className="flex items-center gap-2">
-      <button aria-label="Light theme" className={btn} onClick={() => setTheme('light')}>
-        <Sun size={16} />
-      </button>
-      <button aria-label="Dark theme" className={btn} onClick={() => setTheme('dark')}>
-        <Moon size={16} />
-      </button>
-      {/* <button aria-label="System theme" className={btn} onClick={() => setTheme('system')}>
-        <Monitor size={16} />
-      </button> */}
+    <div className="flex items-center gap-1 rounded-lg border border-[color-mix(in_oklab,var(--text)_10%,transparent)] p-1">
+      <Item value="light" Icon={Sun} />
+      <Item value="dark" Icon={Moon} />
+      <Item value="system" Icon={Monitor} />
     </div>
   )
 }
