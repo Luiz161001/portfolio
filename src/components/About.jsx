@@ -41,7 +41,7 @@ export default function About() {
           </div>
         </div>
 
-        <a className="btn mt-12 inline-flex" href="../assets/cv.pdf" download>
+        <a className="btn mt-12 inline-flex" href="./resume.pdf" download>
           Download CV
         </a>
       </div>
