@@ -1,7 +1,10 @@
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import SectionHeading from './SectionHeading.jsx'
-import { Mail, Check } from 'lucide-react'
+import { Mail, Check, Github, Linkedin } from 'lucide-react'
+
+const GITHUB = "https://github.com/Luiz161001"
+const LINKEDIN = "https://linkedin.com/in/lvieiradepaulo" // update with your profile URL
 
 export default function Contact() {
   const formRef = useRef(null)
@@ -45,12 +48,19 @@ export default function Contact() {
     }
   }
 
+  const inputClass = `
+    mt-2 w-full bg-transparent py-3 outline-none resize-none
+    border-b border-[color-mix(in_oklab,var(--text)_15%,transparent)]
+    text-[var(--text)] placeholder-[var(--muted)]
+    focus:border-[var(--accent)] transition
+  `
+
   return (
-    <section id="contact" className="py-28">
-      <div className="max-w-4xl mx-auto px-6">
+    <section id="contact" className="section-y">
+      <div className="container-max">
         <SectionHeading
           eyebrow="Contact"
-          title="Let’s build something great."
+          title="Let's build something great."
           desc="Have an idea, opportunity, or just want to say hi?"
         />
 
@@ -58,37 +68,37 @@ export default function Contact() {
           <form ref={formRef} onSubmit={onSubmit} className="space-y-8">
 
             <div>
-              <label className="text-sm text-neutral-500">Name</label>
+              <label className="text-sm text-[var(--muted)]">Name</label>
               <input
                 name="from_name"
                 required
-                className="mt-2 w-full border-b border-neutral-300 bg-transparent py-3 outline-none focus:border-black transition"
+                className={inputClass}
               />
             </div>
 
             <div>
-              <label className="text-sm text-neutral-500">Email</label>
+              <label className="text-sm text-[var(--muted)]">Email</label>
               <input
                 name="from_email"
                 type="email"
                 required
-                className="mt-2 w-full border-b border-neutral-300 bg-transparent py-3 outline-none focus:border-black transition"
+                className={inputClass}
               />
             </div>
 
             <div>
-              <label className="text-sm text-neutral-500">Message</label>
+              <label className="text-sm text-[var(--muted)]">Message</label>
               <textarea
                 name="message"
                 required
                 rows="4"
-                className="mt-2 w-full border-b border-neutral-300 bg-transparent py-3 outline-none focus:border-black transition resize-none"
+                className={inputClass}
               />
             </div>
 
             <button
               disabled={status === 'sending'}
-              className="mt-6 inline-flex items-center justify-center px-6 py-3 rounded-full bg-black text-white text-sm font-medium hover:opacity-90 transition disabled:opacity-50"
+              className="btn disabled:opacity-50"
             >
               {status === 'sending'
                 ? 'Sending…'
@@ -105,19 +115,48 @@ export default function Contact() {
           </form>
 
           <div className="flex flex-col gap-6 md:pl-10">
-            <div className="text-sm text-neutral-500">
+            <div className="text-sm text-[var(--muted)]">
               Or reach me directly
             </div>
 
             <button
               onClick={copy}
-              className="inline-flex items-center gap-3 text-lg font-medium border-b border-neutral-300 pb-2 hover:border-black transition"
+              className="inline-flex items-center gap-3 text-base font-medium
+                text-[var(--text)]
+                border-b border-[color-mix(in_oklab,var(--text)_15%,transparent)]
+                pb-2 hover:border-[var(--accent)] hover:text-[var(--accent)]
+                transition w-fit"
             >
-              {copied ? <Check size={18} /> : <Mail size={18} />}
+              {copied ? <Check size={17} /> : <Mail size={17} />}
               {copied ? 'Copied!' : email}
             </button>
 
-            <p className="text-sm text-neutral-400 pt-4">
+            {/* Social links */}
+            <div className="flex items-center gap-3 pt-2">
+              <a
+                href={GITHUB}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+                className="flex items-center gap-2 text-sm text-[var(--muted)] hover:text-[var(--text)] transition"
+              >
+                <Github size={16} />
+                GitHub
+              </a>
+              <span className="text-[var(--border)]">·</span>
+              <a
+                href={LINKEDIN}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                className="flex items-center gap-2 text-sm text-[var(--muted)] hover:text-[var(--text)] transition"
+              >
+                <Linkedin size={16} />
+                LinkedIn
+              </a>
+            </div>
+
+            <p className="text-sm text-[var(--muted)] pt-2">
               Available for freelance and full-time opportunities.
             </p>
           </div>

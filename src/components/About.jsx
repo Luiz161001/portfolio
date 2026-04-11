@@ -18,26 +18,32 @@ export default function About() {
           transition={{ duration: 0.4 }}
           className="mt-12 max-w-3xl text-xl md:text-2xl leading-relaxed text-[var(--text)]"
         >
-          I build clear, fast, and accessible digital products.
+          I'm a full-stack developer who ships products end-to-end — React UIs,
+          REST APIs, PostgreSQL schemas, and Docker deployments.
           <span className="block mt-4 text-[var(--muted)] text-lg md:text-xl">
-            My focus is minimal design, purposeful features, and clean system architecture, blending frontend clarity with backend precision.
+            I care about clean architecture, readable code, and interfaces that feel fast and intuitive.
+            Currently seeking full-time roles where I can build meaningful software alongside a strong team.
           </span>
         </motion.p>
 
         <div className="my-14 h-px bg-[var(--border)]" />
 
-        <div className="grid sm:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <p className="text-sm tracking-wide text-[var(--muted)]">Focus</p>
-            <p className="mt-2 text-lg text-[var(--text)]">UI clarity + speed</p>
+            <p className="text-xs tracking-widest uppercase text-[var(--muted)]">Focus</p>
+            <p className="mt-2 text-base text-[var(--text)] font-medium">UI clarity + performance</p>
           </div>
           <div>
-            <p className="text-sm tracking-wide text-[var(--muted)]">Main Stack</p>
-            <p className="mt-2 text-lg text-[var(--text)]">React, Node, Vercel + Railway</p>
+            <p className="text-xs tracking-widest uppercase text-[var(--muted)]">Frontend</p>
+            <p className="mt-2 text-base text-[var(--text)] font-medium">React · TypeScript · Tailwind</p>
           </div>
           <div>
-            <p className="text-sm tracking-wide text-[var(--muted)]">Values</p>
-            <p className="mt-2 text-lg text-[var(--text)]">Accessible by default</p>
+            <p className="text-xs tracking-widest uppercase text-[var(--muted)]">Backend</p>
+            <p className="mt-2 text-base text-[var(--text)] font-medium">Node · Express · PostgreSQL</p>
+          </div>
+          <div>
+            <p className="text-xs tracking-widest uppercase text-[var(--muted)]">Values</p>
+            <p className="mt-2 text-base text-[var(--text)] font-medium">Accessible by default</p>
           </div>
         </div>
 

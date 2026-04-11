@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Github, Linkedin } from 'lucide-react'
 import ThemeToggle from './ThemeToggle.jsx'
 import { useScrollSpy } from '../hooks/useScrollSpy.jsx'
+
+const GITHUB = "https://github.com/Luiz161001"
+const LINKEDIN = "https://linkedin.com/in/lvieiradepaulo" // update with your profile URL
 
 const links = [
   { id: 'hero', label: 'Home' },
   { id: 'about', label: 'About' },
+  { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
   { id: 'contact', label: 'Contact' },
 ]
@@ -20,13 +24,13 @@ export default function Navbar() {
     <header className="sticky top-0 z-50">
       <div className="backdrop-blur-lg bg-[color-mix(in_oklab,var(--bg)_82%,transparent)] border-b border-[color-mix(in_oklab,var(--text)_10%,transparent)]">
         <div className="container-max flex items-center justify-between h-14 sm:h-16">
-          
+
           {/* Logo */}
           <a
             href="#hero"
             className="font-semibold tracking-tight text-[15px] sm:text-[16px] text-[var(--text)] hover:opacity-90 focus-ring"
           >
-            Portfolio
+            Luiz Eduardo
           </a>
 
           {/* Desktop Nav */}
@@ -60,7 +64,33 @@ export default function Navbar() {
           </nav>
 
           {/* Right Side */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
+
+            {/* Social icons (desktop only) */}
+            <div className="hidden sm:flex items-center gap-1 mr-1">
+              <a
+                href={GITHUB}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+                className="h-8 w-8 flex items-center justify-center rounded-md
+                  text-[var(--muted)] hover:text-[var(--text)] hover:bg-[var(--surface-2)]
+                  transition focus-ring"
+              >
+                <Github size={16} />
+              </a>
+              <a
+                href={LINKEDIN}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                className="h-8 w-8 flex items-center justify-center rounded-md
+                  text-[var(--muted)] hover:text-[var(--text)] hover:bg-[var(--surface-2)]
+                  transition focus-ring"
+              >
+                <Linkedin size={16} />
+              </a>
+            </div>
 
             <ThemeToggle />
 
@@ -97,6 +127,28 @@ export default function Navbar() {
                   </a>
                 )
               })}
+
+              {/* Mobile social links */}
+              <div className="flex items-center gap-3 pt-1">
+                <a
+                  href={GITHUB}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                  className="text-[var(--muted)] hover:text-[var(--text)] transition focus-ring"
+                >
+                  <Github size={17} />
+                </a>
+                <a
+                  href={LINKEDIN}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                  className="text-[var(--muted)] hover:text-[var(--text)] transition focus-ring"
+                >
+                  <Linkedin size={17} />
+                </a>
+              </div>
             </nav>
           </div>
         )}

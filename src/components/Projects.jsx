@@ -3,6 +3,7 @@ import SectionHeading from "./SectionHeading.jsx"
 import ProjectCard from "./ProjectCard.jsx"
 import ProjectModal from "./ProjectModal.jsx"
 import { projects as data } from "../data/projects.js"
+import { Github } from "lucide-react"
 
 const filters = ["All", "Web", "AI"]
 
@@ -40,13 +41,16 @@ function Segmented({ value, onChange }) {
   )
 }
 
+const productProjects = data.filter((p) => p.kind !== "study")
+const studyProjects = data.filter((p) => p.kind === "study")
+
 export default function Projects() {
   const [filter, setFilter] = useState("All")
   const [active, setActive] = useState(null)
 
   const list = useMemo(() => {
-    if (filter === "All") return data
-    return data.filter((p) => p.tags?.includes(filter))
+    if (filter === "All") return productProjects
+    return productProjects.filter((p) => p.tags?.includes(filter))
   }, [filter])
 
   const featured = list?.[0]
@@ -122,11 +126,50 @@ export default function Projects() {
           </div>
         )}
 
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {rest.map((p) => (
-            <ProjectCard key={p.id} project={p} onOpen={() => setActive(p)} />
-          ))}
-        </div>
+        {rest.length > 0 && (
+          <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {rest.map((p) => (
+              <ProjectCard key={p.id} project={p} onOpen={() => setActive(p)} />
+            ))}
+          </div>
+        )}
+
+        {/* Study / open-source repos — shown only under "All" */}
+        {filter === "All" && studyProjects.length > 0 && (
+          <div className="mt-12 pt-10 border-t border-[var(--border)]">
+            <p className="text-xs font-semibold tracking-widest uppercase text-[var(--muted)] mb-5">
+              Also on GitHub
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              {studyProjects.map((p) => (
+                <a
+                  key={p.id}
+                  href={p.links?.repo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="
+                    group inline-flex items-center justify-between gap-4
+                    rounded-2xl px-5 py-4 w-full sm:max-w-sm
+                    bg-[var(--surface-1)]/70 backdrop-blur
+                    ring-1 ring-black/10 dark:ring-white/10
+                    shadow-elev-1 hover:shadow-elev-2 transition
+                  "
+                >
+                  <div>
+                    <p className="text-sm font-semibold text-[var(--text)]">{p.title}</p>
+                    <p className="mt-0.5 text-xs text-[var(--muted)]">
+                      {p.details?.tech?.slice(0, 3).join(" · ")}
+                    </p>
+                  </div>
+                  <Github
+                    size={17}
+                    className="shrink-0 text-[var(--muted)] group-hover:text-[var(--text)] transition"
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
 
         <ProjectModal project={active} onClose={() => setActive(null)} />
       </div>

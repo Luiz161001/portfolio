@@ -35,6 +35,7 @@ export const projects = [
 
   {
     id: "data-structures",
+    kind: "study",
     title: "Data Structures & Algorithms",
     tags: ["Algorithms", "Computer Science"],
     summary:
